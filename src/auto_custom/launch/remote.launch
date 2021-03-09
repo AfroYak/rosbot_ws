@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- JoyStick Connection -->
+<include file="$(find teleop_twist_joy)/launch/teleop.launch"/>
+
+<!-- Remote Bringup -->
+<machine 
+    name="rospi" 
+    address="rospi" 
+    user="pi" 
+    env-loader="/opt/ros/melodic/remote_env.sh" 
+    default="true" 
+/>
+
+<include file="$(find turtlebot3_bringup)/launch/custom.launch"/>
+
+</launch>

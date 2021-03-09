@@ -1,0 +1,4 @@
+<launch>
+    <arg name="location"/>
+    <node name="map_server" pkg="map_server" type="map_saver" args="-f $(find auto_custom)/maps/$(arg location)"/>
+</launch>
